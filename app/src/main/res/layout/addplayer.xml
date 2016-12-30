@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="67dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="99dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:width="120dp"
+        android:hint="@string/playersNameString" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/editNumber"
+        android:layout_alignLeft="@+id/editName"
+        android:layout_alignStart="@+id/editName"
+        android:width="40dp"
+        android:layout_below="@+id/editName"
+        android:maxLength="2"
+        android:inputType="number"
+        android:hint="@string/emptyNumberString" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editBats"
+        android:layout_below="@+id/editNumber"
+        android:layout_alignLeft="@+id/editNumber"
+        android:layout_alignStart="@+id/editNumber"
+        android:width="20dp"
+        android:inputType="text"
+        android:maxLength="1"
+        android:hint="@string/RightHanded" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editThrows"
+        android:layout_below="@+id/editBats"
+        android:layout_alignLeft="@+id/editBats"
+        android:layout_alignStart="@+id/editBats"
+        android:layout_alignRight="@+id/editBats"
+        android:maxLength="1"
+        android:width="20dp"
+        android:hint="@string/RightHanded" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Number"
+        android:id="@+id/textView"
+        android:layout_toRightOf="@+id/editNumber"
+        android:layout_toEndOf="@+id/editNumber"
+        android:layout_alignBottom="@+id/editNumber" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Bats"
+        android:id="@+id/textView2"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignBottom="@+id/editBats"
+        android:layout_toRightOf="@+id/editBats" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Throws"
+        android:id="@+id/textView3"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignBottom="@+id/editThrows"
+        android:hint="@string/RL" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/savePlayer"
+        android:id="@+id/buttonSavePlayer"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:onClick="onClickSavePlayer" />
+
+</RelativeLayout>
